@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case List</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Case List</h1>
-    <table border="1">
-        <tr>
-            <th>Case ID</th>
-            <th>Submitter</th>
-            <th>Offender</th>
-            <th>Incident</th>
-            <th>Violations</th>
-            <th>Evidence</th>
-            <th>Status</th>
-            <th>Submitted Date</th>
-        </tr>
-        <% cases.forEach(function(caseItem) { %>
-        <tr>
-            <td><%= caseItem.case_id %></td>
-            <td><%= caseItem.submitter %></td>
-            <td><%= caseItem.offender %></td>
-            <td><%= caseItem.incident %></td>
-            <td><%= caseItem.violations %></td>
-            <td><%= caseItem.evidence %></td>
-            <td><%= caseItem.status %></td>
-            <td><%= caseItem.submitted_date.toDateString() %></td>
-        </tr>
-        <% }); %>
-    </table>
+    <div class="container">
+        <h1>Case List</h1>
+        <marquee class="title">Justice And Advocate General</marquee>
+        <table>
+            <thead>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Submitter</th>
+                    <th>Offender</th>
+                    <th>Incident</th>
+                    <th>Violations</th>
+                    <th>Evidence</th>
+                    <th>Status</th>
+                    <th>Submitted Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cases.forEach(function(item) { %> <!-- Changed 'case' to 'item' -->
+                    <tr>
+                        <td><%= item.case_id %></td>
+                        <td><%= item.submitter %></td>
+                        <td><%= item.offender %></td>
+                        <td><%= item.incident %></td>
+                        <td><%= item.violations %></td>
+                        <td><%= item.evidence %></td>
+                        <td><%= item.status %></td>
+                        <td><%= new Date(item.submitted_date).toDateString() %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
