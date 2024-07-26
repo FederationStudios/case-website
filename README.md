@@ -11,23 +11,15 @@ This project is a simple Case Management System built using Node.js, Express, Mo
 ## Project Structure
 
 case-website/
-│
-├── node_modules/ # Node.js modules
-├── public/ # Public folder for static assets
-│ ├── css/
-│ │ └── styles.css # Custom CSS for styling
-│ └── js/ # (Optional) JavaScript files
-│
-├── views/ # Views for rendering HTML
-│ └── index.ejs # Main view for displaying cases
-│
-├── DBModels/ # Mongoose schemas
-│ └── Case.js # Case schema
-│
-├── config.json # Configuration file
-├── package.json # Node.js project metadata
-├── package-lock.json # Exact versions of installed packages
-└── server.js # Main server file
+├── views/
+│   ├── index.ejs           # Main view template for displaying cases
+├── public/
+│   ├── styles/
+│   │   ├── styles.css      # CSS file for styling the website
+├── server.js               # Main server file to run the application
+├── package.json            # Project dependencies and scripts
+├── package-lock.json       # Exact versions of installed packages
+└── README.md               # Project documentation
 
 
 ## Prerequisites
@@ -92,9 +84,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Contact
 For any questions or issues, you can reach out to me:
 
-Name: suman9725
-GitHub Username: suman9725
-Email: suman9725@staff.irf.red
+1. Name: suman9725
+2. GitHub Username: suman9725
+3. Email: suman9725@staff.irf.red
 
 ## Acknowledgements
 
