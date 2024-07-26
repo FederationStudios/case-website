@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case List</title>
+</head>
+<body>
+    <h1>Case List</h1>
+    <table border="1">
+        <tr>
+            <th>Case ID</th>
+            <th>Submitter</th>
+            <th>Offender</th>
+            <th>Incident</th>
+            <th>Violations</th>
+            <th>Evidence</th>
+            <th>Status</th>
+            <th>Submitted Date</th>
+        </tr>
+        <% cases.forEach(function(caseItem) { %>
+        <tr>
+            <td><%= caseItem.case_id %></td>
+            <td><%= caseItem.submitter %></td>
+            <td><%= caseItem.offender %></td>
+            <td><%= caseItem.incident %></td>
+            <td><%= caseItem.violations %></td>
+            <td><%= caseItem.evidence %></td>
+            <td><%= caseItem.status %></td>
+            <td><%= caseItem.submitted_date.toDateString() %></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
